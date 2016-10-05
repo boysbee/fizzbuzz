@@ -39,8 +39,23 @@ class FizzBuzzTest extends FunSuite with Matchers {
     val result = FizzBuzz.getResult(number)
     result should  be("buzz")
   }
+  test("input number 11 should return \"11\"") {
+
+    val number = 11
+    val result = FizzBuzz.getResult(number)
+    result should  be("11")
+  }
+  test("input number 15 should return \"fizzbuzz\"") {
+
+    val number = 15
+    val result = FizzBuzz.getResult(number)
+    result should  be("fizzbuzz")
+  }
   object FizzBuzz {
     def getResult(number: Int):String = {
+      if( number % 3 == 0 && number % 5 == 0){
+        return "fizzbuzz"
+      }
       if(number % 5 == 0) {
         return "buzz"
       }
