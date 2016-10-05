@@ -51,5 +51,10 @@ class FizzBuzzTest extends FunSuite with Matchers {
     val result = FizzBuzz.getResult(number)
     result should  be("fizzbuzz")
   }
+  test("input number 17 should return \"17\"") {
 
+    val number = 17
+    val result = FizzBuzz.getResult(number)
+    result should  be("17")
+  }
 }
